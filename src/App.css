@@ -1,0 +1,355 @@
+/* Universal CSS */
+.btn--transparent {
+    border: none;
+    background-color: transparent;
+}
+
+/* CSS for the wrapping div of all html */
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* Header CSS */
+.header {
+    padding: 45.5px;
+    padding-bottom: 0;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header__navlist {
+    display: flex;
+    font-family: 'NEW YORK', sans-serif;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    gap: 34px;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.header__navlink {
+    padding-bottom: 48px;
+    letter-spacing: 2px;
+}
+
+.header__navlink a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header__navlink--active {
+    border-bottom: 2px solid black;
+}
+
+/* Main CSS */
+.blog {
+    text-align: center;
+}
+
+.blog--lg {
+    margin: 43px auto 0;
+    padding: 34px 0;
+    max-width: 854px;
+}
+
+.blog__photo {
+    max-width: 100%;
+}
+
+.blog--lg .blog__head,
+.blog--open .blog__head {
+    font-size: 54px;
+    margin: 45px auto 0;
+    max-width: 850px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.blog--lg .blog__summary,
+.blog--open .blog__summary {
+    font-size: 20px;
+    margin: 32px auto;
+    max-width: 450px;
+    line-height: 1.7;
+    font-family: monospace;
+}
+
+.blog--sm .blog__head {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    line-height: 26.4px;
+    margin: 20px auto;
+    max-width: 260px;
+    font-size: 22px;
+}
+
+.blog--open {
+    max-width: 100%;
+    padding: 0;
+    margin: 43px auto 32px;
+}
+
+.blog--open .blog__head {
+    margin-top: 0;
+}
+
+.blog--open .blog__photo {
+    min-width: 100%;
+}
+
+.blogcontent {
+    max-width: 640px;
+    margin: auto;
+}
+
+.blog--readable__photoarea {
+    margin: 0;
+}
+
+.blog--readable__photo {
+    margin-left: -107px;
+}
+
+.blog--readable__caption {
+    font-family: 'SF Pro Display', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    max-width: 480px;
+    margin: auto;
+}
+
+.blog__parts {
+    margin: 52px 0;
+    font-family: 'NEW YORK', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.blog__parts__head {
+    margin: 2px 0 24px 0;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 32px;
+}
+
+.articles {
+    padding: 20px 0;
+    max-width: 640px;
+    margin: 0 auto 100px;
+    border-top: 2px solid black;
+}
+
+.articles--full {
+    max-width: 100%;
+    margin-top: 100px;
+    position: relative;
+}
+
+.articles--full__eyes {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+}
+
+.articles__head {
+    font-size: 44px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.articles__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+    gap: 28px;
+}
+
+.blogger {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blogger__section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.blogger__avatar {
+    border-radius: 50%;
+}
+
+.blogger__details {
+    text-align: left;
+    font-family: 'NEW YORK', sans-serif;
+}
+
+.blogger__name {
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social {
+    box-shadow: 0px 1px 4px 0px #00000014;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+}
+
+.social__socialhandles {
+    padding: 12px 25px;
+    border-right: 1px solid #EAEAEA;
+}
+
+.social--full {
+    margin: 32px 0;
+}
+
+.social--full__socialhandles {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-width: 50%;
+}
+
+.social__socialhandles--last {
+    border: none;
+}
+
+.blog--readable__tags {
+    margin-bottom: 2px;
+}
+
+.blog__divider {
+    border: 0px;
+    border-bottom: 1px dashed grey;
+    margin: 32px 0;
+}
+
+/* Signup section CSS */
+.signup__wrapper {
+    border: 1px solid black;
+    border-top-width: 12px;
+    max-width: 640px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 59px 0;
+}
+
+.signup__head {
+    font-family: 'NEW YORK', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.signup__info {
+    font-family: 'SF Pro Display', sans-serif;
+    max-width: 540px;
+    margin: 0 auto 36px;
+    font-size: 20px;
+}
+
+.inpgrp {
+    border: 1px solid black;
+    max-width: 520px;
+    margin: auto;
+    display: flex;
+}
+
+.inpgrp * {
+    font-size: 20px;
+    padding: 15px;
+}
+
+.inpgrp input {
+    border: none;
+    flex-grow: 1;
+}
+
+.inpgrp input:focus {
+    outline: none;
+}
+
+.inpgrp button {
+    background-color: black;
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    border: none;
+}
+/* Footer CSS */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 18px 0 32px 0;
+}
+
+.footer__marqueetags {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 15px;
+}
+
+.footer__marqueetags--heavy {
+    font-weight: 800;
+}
+
+.footer__marqueetags--light {
+    font-weight: 400;
+}
+
+.footer__logo {
+    filter: invert();
+    max-height: 27px;
+}
+
+.footer__middle {
+    margin: 64px auto;
+    max-width: 550px;
+    text-align: center;
+}
+
+.footer__details {
+    font-family: 'NEW YORK', sans-serif;
+    margin: 25px 0 32px 0;
+    line-height: 22.4px;
+}
+
+.footer__linkslist {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 25px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.footer__links a {
+    color: white;
+}
+
+.footer__bottom {
+    text-align: center;
+}
+
+.footer__copyrights {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+    font-family: 'SF Pro Display', sans-serif;
+    margin: auto;
+}
