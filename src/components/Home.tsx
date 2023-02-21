@@ -77,7 +77,7 @@ function Home() {
           <div className="articles__wrapper">
             {articles.map((ele) => {
               return (
-                <article className="blog blog--sm">
+                <article key={ele.img} className="blog blog--sm">
                   <img src={ele.img} alt={`pic for ${ele.content}`} />
                   <h3 className="blog__head">{ele.content}</h3>
                 </article>

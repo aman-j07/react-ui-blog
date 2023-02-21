@@ -19,6 +19,7 @@ function Footer() {
         <Marquee className="footer__marquee" gradient={false}>
           {marqueeTags.map((ele, i) => (
             <span
+            key={ele}
               className={`footer__marqueetags ${
                 i % 2 === 0
                   ? "footer__marqueetags--light"

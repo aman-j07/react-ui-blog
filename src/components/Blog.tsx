@@ -70,7 +70,7 @@ function Blog() {
               <button className="social__socialhandles btn--transparent">
                 <Twitter />
               </button>
-              <button className="social__socialhandles social__socialhandles--last btn--transparent">
+              <button className="social__socialhandles btn--transparent">
                 <FacebookRounded />
               </button>
             </div>
@@ -158,7 +158,7 @@ function Blog() {
             <FacebookRounded />
             <span>Share on Facebook</span>
           </button>
-          <button className="social__socialhandles social--full__socialhandles social__socialhandles--last btn--transparent">
+          <button className="social__socialhandles social--full__socialhandles btn--transparent">
             <Twitter />
             <span>Share on Twitter</span>
           </button>
@@ -190,7 +190,7 @@ function Blog() {
         <div className="articles__wrapper">
           {articles.map((ele) => {
             return (
-              <article className="blog blog--sm">
+              <article key={ele.img} className="blog blog--sm">
                 <img src={ele.img} alt={`pic for ${ele.content}`} />
                 <h3 className="blog__head">{ele.content}</h3>
               </article>
