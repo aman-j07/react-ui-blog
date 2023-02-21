@@ -1,5 +1,6 @@
 import NordicRoseLogo from "../assets/logos/NORDIC ROSE.png";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const marqueeTags = [
@@ -30,13 +31,13 @@ function Footer() {
         </Marquee>
       </div>
       <div className="footer__middle">
-        <a href="#Home">
+        <Link to='/'>
           <img
             className="footer__logo"
             src={NordicRoseLogo}
             alt="Nordic Rose Logo"
           />
-        </a>
+        </Link>
         <p className="footer__details">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit
           tempus erat egestas efficitur. In hac habitasse platea dictumst. Fusce
