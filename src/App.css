@@ -1,4 +1,8 @@
 /* Universal CSS */
+body {
+    margin: 0;
+}
+
 .btn--transparent {
     border: none;
     background-color: transparent;
@@ -17,19 +21,34 @@
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
 }
 
+.header__togglesection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__toggler {
+    display: none;
+}
+
 .header__navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
+.header__navgrp {
+    flex-grow: 0.5;
+    transition: 500ms;
+}
+
 .header__navlist {
     display: flex;
+    justify-content: space-between;
     font-family: 'NEW YORK', sans-serif;
     margin: 0px;
     list-style: none;
     padding: 0px;
-    gap: 34px;
     height: 100%;
     text-transform: uppercase;
 }
@@ -37,12 +56,12 @@
 .header__navlink {
     padding-bottom: 48px;
     letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .header__navlink a {
     color: black;
     text-decoration: none;
-    font-size: 20px;
 }
 
 .header__navlink--active {
@@ -158,7 +177,7 @@
 .articles--full__eyes {
     position: absolute;
     top: -32px;
-    left: 50%;
+    left: calc(50% - 33px);
 }
 
 .articles__head {
@@ -210,6 +229,7 @@
 .social__socialhandles {
     padding: 12px 25px;
     border-right: 1px solid #EAEAEA;
+    min-width: 50%;
 }
 
 .social--full {
@@ -289,6 +309,7 @@
     font-family: 'SF Pro Display', sans-serif;
     border: none;
 }
+
 /* Footer CSS */
 .footer {
     background-color: black;
@@ -352,4 +373,156 @@
     font-size: 12px;
     font-family: 'SF Pro Display', sans-serif;
     margin: auto;
+}
+
+@media (width < 1100px) {
+    .header__logo {
+        max-height: 25px;
+    }
+
+    .header__navlink {
+        font-size: 16px;
+    }
+
+    .blog--readable__photo {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+@media (width < 900px) {
+    .articles__wrapper {
+        padding: 0 10px;
+    }
+}
+
+@media (width < 775px) {
+    .header__logo {
+        max-height: 20px;
+    }
+
+    .header {
+        padding: 15px 10px;
+    }
+
+    .header__togglesection {
+        width: 100%;
+    }
+
+    .header__toggler {
+        display: block;
+    }
+
+    .header__navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header__navgrp {
+        display: block;
+        height: 0px;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+
+    .header__navgrp--open {
+        height: 100px;
+    }
+
+    .header__navgrp .header__navlist {
+        display: block;
+    }
+
+    .header__navlink {
+        padding: 0;
+        margin-bottom: 5px;
+    }
+
+    .blog--lg {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .blog--lg .blog__head,
+    .blog--open .blog__head {
+        font-size: 26px;
+        margin: 32px auto 0;
+    }
+
+    .blog--lg .blog__summary,
+    .blog--open .blog__summary {
+        font-size: 15px;
+        margin: 24px auto;
+    }
+
+    .articles__head {
+        font-size: 28px;
+    }
+
+    .articles__wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .blog--sm .blog__photo {
+        max-width: 100%;
+    }
+
+    .blogcontent {
+        padding: 0 10px;
+    }
+
+    .signup__wrapper {
+        padding: 42px 10px;
+    }
+
+    .footer__details {
+        font-size: 13px;
+    }
+}
+
+@media (width < 520px) {
+    .blogger {
+        flex-direction: column;
+        gap: 5px;
+        align-items: stretch;
+    }
+
+    .blogger__details {
+        font-size: 13px;
+    }
+
+    .blog__parts {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .blog__parts__head {
+        font-size: 26px;
+    }
+
+    .blog--readable__caption {
+        font-size: 13px;
+    }
+
+    .socialhandles__msg {
+        display: none;
+    }
+
+    .signup__head {
+        font-size: 28px;
+    }
+
+    .signup__info {
+        font-size: 16px;
+    }
+
+    .inpgrp {
+        max-width: 100%;
+    }
+
+    .inpgrp *{
+        font-size: 14px;
+        padding: 10px 5px;
+    }
 }

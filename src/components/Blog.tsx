@@ -3,32 +3,33 @@ import blogOwner from "../assets/images/blog-owner.png";
 import blogImage from "../assets/images/Rectangle 8.png";
 import eyes from "../assets/images/eyes.png";
 import { FacebookRounded, Twitter } from "@mui/icons-material";
+import Suggestions from "./Suggestions";
 
 function Blog() {
   const articles = [
     {
       img: require("../assets/images/Rectangle 13-1.png"),
-      content: "Connecting artificial intelligence with digital product design",
+      title: "Connecting artificial intelligence with digital product design",
     },
     {
       img: require("../assets/images/Rectangle 13.png"),
-      content: "Hello world, or, in other words, why this blog exists",
+      title: "Hello world, or, in other words, why this blog exists",
     },
     {
       img: require("../assets/images/Rectangle 12-1.png"),
-      content: "Here are some things you should know regarding how we work",
+      title: "Here are some things you should know regarding how we work",
     },
     {
       img: require("../assets/images/Rectangle 37.png"),
-      content: "Here are some things you should know regarding how we work",
+      title: "Here are some things you should know regarding how we work",
     },
     {
       img: require("../assets/images/Rectangle 39.png"),
-      content: "Connecting artificial intelligence with digital product design",
+      title: "Connecting artificial intelligence with digital product design",
     },
     {
       img: require("../assets/images/Rectangle 18.png"),
-      content:
+      title:
         "How modern remote working tools get along with Old School Cowboy's methods",
     },
   ];
@@ -156,11 +157,11 @@ function Blog() {
         <div className="social social--full">
           <button className="social__socialhandles social--full__socialhandles btn--transparent">
             <FacebookRounded />
-            <span>Share on Facebook</span>
+            <span className="socialhandles__msg">Share on Facebook</span>
           </button>
           <button className="social__socialhandles social--full__socialhandles btn--transparent">
             <Twitter />
-            <span>Share on Twitter</span>
+            <span className="socialhandles__msg">Share on Twitter</span>
           </button>
         </div>
         <span className="blog--readable__tags">
@@ -184,20 +185,7 @@ function Blog() {
           </div>
         </div>
       </section>
-      <section className="articles articles--full">
-        <img className="articles--full__eyes" src={eyes} alt="eyes pic" />
-        <h3 className="articles__head">What to read next</h3>
-        <div className="articles__wrapper">
-          {articles.map((ele) => {
-            return (
-              <article key={ele.img} className="blog blog--sm">
-                <img src={ele.img} alt={`pic for ${ele.content}`} />
-                <h3 className="blog__head">{ele.content}</h3>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+      <Suggestions title='What to read next' articles={articles} size="lg"/>
       <section className="signup">
         <div className="signup__wrapper">
           <h2 className="signup__head">Sign up for the newsletter </h2>

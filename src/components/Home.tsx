@@ -1,55 +1,56 @@
 import highlight from "../assets/images/image 2.png";
+import Suggestions from "./Suggestions";
 
 function Home() {
     const articles = [
         {
           img: require("../assets/images/Rectangle 12-1.png"),
-          content: "Here are some things you should know regarding how we work",
+          title: "Here are some things you should know regarding how we work",
         },
         {
           img: require("../assets/images/Rectangle 13-1.png"),
-          content:
+          title:
             "Granny gives everyone the finger, and other tips from OFFF Barcelona",
         },
         {
           img: require("../assets/images/Rectangle 13.png"),
-          content: "Hello world, or, in other words, why this blog exists",
+          title: "Hello world, or, in other words, why this blog exists",
         },
         {
           img: require("../assets/images/Rectangle 12.png"),
-          content: "Here are some things you should know regarding how we work",
+          title: "Here are some things you should know regarding how we work",
         },
         {
           img: require("../assets/images/Rectangle 14.png"),
-          content: "Connecting artificial intelligence with digital product design",
+          title: "Connecting artificial intelligence with digital product design",
         },
         {
           img: require("../assets/images/Rectangle 15.png"),
-          content: "It’s all about finding the perfect balance",
+          title: "It’s all about finding the perfect balance",
         },
         {
           img: require("../assets/images/Rectangle 15.png"),
-          content: "I believe learning is the most important skill",
+          title: "I believe learning is the most important skill",
         },
         {
           img: require("../assets/images/Rectangle 13-2.png"),
-          content: "Clients are part of the team",
+          title: "Clients are part of the team",
         },
         {
           img: require("../assets/images/Rectangle 19.png"),
-          content: "Clients are part of the team",
+          title: "Clients are part of the team",
         },
         {
           img: require("../assets/images/Rectangle 17.png"),
-          content: "Here are some things you should know regarding how we work",
+          title: "Here are some things you should know regarding how we work",
         },
         {
           img: require("../assets/images/Rectangle 16.png"),
-          content: "Connecting artificial intelligence with digital product design",
+          title: "Connecting artificial intelligence with digital product design",
         },
         {
           img: require("../assets/images/Rectangle 18.png"),
-          content:
+          title:
             "How modern remote working tools get along with Old School Cowboy's methods",
         },
       ];
@@ -72,19 +73,7 @@ function Home() {
             </p>
           </article>
         </section>
-        <section className="articles">
-          <h3 className="articles__head">All Articles</h3>
-          <div className="articles__wrapper">
-            {articles.map((ele) => {
-              return (
-                <article key={ele.img} className="blog blog--sm">
-                  <img src={ele.img} alt={`pic for ${ele.content}`} />
-                  <h3 className="blog__head">{ele.content}</h3>
-                </article>
-              );
-            })}
-          </div>
-        </section>
+        <Suggestions title='All Articles' articles={articles}/>
       </main>
   )
 }
